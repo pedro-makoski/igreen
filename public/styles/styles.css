@@ -535,6 +535,7 @@ footer {
             border-bottom: 3px solid var(--color-1);
 
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 10px;
 
             img {
@@ -650,6 +651,12 @@ footer {
                 display: none;
             }
         }
+    }
+
+    
+    .faq div article div img {
+        width: 20px;
+        height: 20px;
     }
 }
 

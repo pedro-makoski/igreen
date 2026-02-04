@@ -12,8 +12,8 @@ $current = $estados[$path] ?? $estados[''];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Igreen - <?php echo $current->nome; ?></title>
-    <link rel="stylesheet" href="./styles/vars.css?v=12">
-    <link rel="stylesheet" href="./styles/styles.css?v=12">
+    <link rel="stylesheet" href="./styles/vars.css?v=13">
+    <link rel="stylesheet" href="./styles/styles.css?v=13">
     <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
 </head>
 
@@ -195,9 +195,9 @@ $current = $estados[$path] ?? $estados[''];
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
-    <script src="./scripts/select-states.js?v=12"></script>
-    <script src="./scripts/handle-faq.js?v=12"></script>
-    <script src="./scripts/animations.js?v=12"></script>
+    <script src="./scripts/select-states.js?v=13"></script>
+    <script src="./scripts/handle-faq.js?v=13"></script>
+    <script src="./scripts/animations.js?v=13"></script>
 </body>
 
 </html>
