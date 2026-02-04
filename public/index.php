@@ -12,8 +12,8 @@ $current = $estados[$path] ?? $estados[''];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Igreen - <?php echo $current->nome; ?></title>
-    <link rel="stylesheet" href="./styles/vars.css?v=13">
-    <link rel="stylesheet" href="./styles/styles.css?v=13">
+    <link rel="stylesheet" href="./styles/vars.css?v=22">
+    <link rel="stylesheet" href="./styles/styles.css?v=22">
     <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
 </head>
 
@@ -160,7 +160,7 @@ $current = $estados[$path] ?? $estados[''];
                     <div>
                         <?php foreach ($perguntasRespostas as $faq): ?>
                             <article>
-                                <div class="question">
+                                <div class="question" tabindex="0">
                                     <h3><?php echo $faq->pergunta; ?></h3>
                                     <img src="./assets/imgs/big-dropdown.svg">
                                 </div>
@@ -195,9 +195,9 @@ $current = $estados[$path] ?? $estados[''];
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
-    <script src="./scripts/select-states.js?v=13"></script>
-    <script src="./scripts/handle-faq.js?v=13"></script>
-    <script src="./scripts/animations.js?v=13"></script>
+    <script src="./scripts/select-states.js?v=22"></script>
+    <script src="./scripts/handle-faq.js?v=22"></script>
+    <script src="./scripts/animations.js?v=22"></script>
 </body>
 
 </html>

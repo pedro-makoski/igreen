@@ -169,7 +169,7 @@ header .head>.select-state {
     transition: .2s;
 }
 
-.hover-flecha-menu:hover::after {
+.hover-flecha-menu:hover::after, .hover-flecha-menu:has(:focus)::after {
     right: 20px;
     opacity: 1;
     transform: translateY(-50%) rotate(-90deg) scale(1);
@@ -185,7 +185,8 @@ header .head>.select-state {
     transition: .2s;
 }
 
-.hover-flecha-menu:hover a {
+.hover-flecha-menu:hover a, .hover-flecha-menu a:focus {
+    outline: none;
     padding-right: 30px !important;
 }
 

@@ -2,11 +2,14 @@ const ENTER_CLASS = "enter"
 
 class StatesHandler {
     handle() {
-        this.handleClick()
+        window.addEventListener("load", () => {
+            this.handleClick()
+        })
     }
 
     handleClick() {
-        const btn = document.querySelector(".select-state")
+        const fullDiv =  document.querySelector(".select-state")
+        const btn = document.querySelector(".select-state button")
         const statesList = document.querySelector(".states-wrapper")
 
         btn.addEventListener("click", (e) => {
@@ -21,13 +24,28 @@ class StatesHandler {
         document.addEventListener("click", () => {
             statesList.classList.remove(ENTER_CLASS)
         })
-        
-        btn.addEventListener("mouseover", () => {
-            console.log("bom dia")
+
+        btn.addEventListener("focus", () => {
             statesList.classList.add(ENTER_CLASS)
         })
 
-        btn.addEventListener("mouseleave", () => {
+        btn.addEventListener("focus", () => {
+            statesList.classList.remove(ENTER_CLASS)
+        })
+        
+        statesList.addEventListener("focusin", () => {
+            statesList.classList.add(ENTER_CLASS)
+        })
+
+        statesList.addEventListener("focusout", () => {
+            statesList.classList.remove(ENTER_CLASS)
+        }) 
+        
+        fullDiv.addEventListener("mouseover", () => {
+            statesList.classList.add(ENTER_CLASS)
+        })
+
+        fullDiv.addEventListener("mouseleave", () => {
             statesList.classList.remove(ENTER_CLASS)
         })
     }

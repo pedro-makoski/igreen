@@ -4,12 +4,12 @@ function isMobileDevice() {
   }
 
   return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(
-    navigator.userAgent
+    navigator.userAgent,
   );
 }
 
 function animate() {
-  if(isMobileDevice()) return;
+  if (isMobileDevice()) return;
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
   Animations.headerAnimate();
   Animations.smoothScroll();
@@ -21,16 +21,31 @@ function animate() {
   Animations.animateFaq();
   Animations.animateFooter();
 
-  window.addEventListener("resize", () => {
-    ScrollTrigger.refresh()
-  })
+  ScrollTrigger.config({
+    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize",
+  });
+  scrollToFocusSmooth()
 }
 
-class Animations { 
+function scrollToFocusSmooth() {
+  window.addEventListener(
+    "focusin",
+    (e) => {
+      const smoother = ScrollSmoother.get();
+      if (smoother) {
+        smoother.scrollTo(e.target, true, "center center");
+      }
+    },
+    { passive: false },
+  );
+}
+
+class Animations {
   static smoothScroll() {
     ScrollSmoother.create({
-      smoth: 1,
+      smooth: 1,
       effects: true,
+      keyboard: true,
     });
   }
 
@@ -200,8 +215,8 @@ class Animations {
         start: "start bottom",
         end: "center center",
         scrub: true,
-      }
-    })
+      },
+    });
   }
 }
 
