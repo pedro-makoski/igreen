@@ -34,8 +34,12 @@ class FaqHandler {
         item.style.height = `${heightQuestion}px`
     }
 
+    closeAll() {
+        document.querySelectorAll(".faq article").forEach(itemToClose => this.close(itemToClose))
+    }
+
     open(item) {
-        this.close(item)
+        this.closeAll()
         item.classList.add(ENTER_CLASS)
         const question = item.querySelector(".question")
         const response = item.querySelector(".response")

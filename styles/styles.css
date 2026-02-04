@@ -115,8 +115,7 @@ header .head>.select-state {
             flex-direction: row;
             flex-wrap: wrap;
             gap: 5px;
-            justify-items: center;
-            justify-content: center;
+            justify-content: start;
             background-color: var(--color-1);
             list-style-type: none;
             border-radius: var(--border-radius);
@@ -519,6 +518,10 @@ footer {
         overflow: hidden;
         transition: .2s;
 
+        .question {
+            cursor: pointer;
+        }
+
         div {
             display: flex;
             flex-direction: row;
@@ -529,11 +532,8 @@ footer {
             margin-bottom: 10px;
 
             img {
-                transition: .2s;
-            }
-
-            img {
                 width: 30px;
+                transition: .2s;
             }
 
         }

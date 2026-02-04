@@ -1,8 +1,9 @@
 <?php
 require_once '_data.php';
+require_once '_model.php';
 
 $path = isset($_GET['state']) ? strtolower(trim($_GET['state'])) : '';
-$current = $estados[$ultimo] ?? $estados[''];
+$current = $estados[$path] ?? $estados[''];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,8 +12,8 @@ $current = $estados[$ultimo] ?? $estados[''];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Igreen - <?php echo $current->nome; ?></title>
-    <link rel="stylesheet" href="./styles/vars.css?v=5">
-    <link rel="stylesheet" href="./styles/styles.css?v=5">
+    <link rel="stylesheet" href="./styles/vars.css?v=7">
+    <link rel="stylesheet" href="./styles/styles.css?v=7">
     <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
 </head>
 
@@ -64,7 +65,7 @@ $current = $estados[$ultimo] ?? $estados[''];
                     </div>
                 </div>
                 <div class="hero">
-                    <h1>Economize na conta de luz</h1>
+                    <h1>Economize na sua conta de luz</h1>
                     <p>Invista numa conta de luz Igreen, sem burocracia, e economize em até <strong>8% até 100%</strong> todos os meses</p>
                     <div class="cadastrar-button hover-flecha-menu">
                         <a href="<?php echo $current->linkCadastro; ?>" rel="external" target="_blank">Cadastrar</a>
@@ -78,11 +79,6 @@ $current = $estados[$ultimo] ?? $estados[''];
                     <h2>Por que o igreen?</h2>
                     <p>Energia limpa e economia real para sua casa ou empresa.</p>
                     <ul>
-                        <li class="why">
-                            <img src="./assets/imgs/house.svg" alt="Imagem de uma casa">
-                            <h3>+500.000</h3>
-                            <p>Casas cadastradas</p>
-                        </li>
                         <li class="why">
                             <img src="./assets/imgs/circle-dollar-sign.svg" alt="Imagem de uma moeda">
                             <h3>Economico</h3>
@@ -130,7 +126,14 @@ $current = $estados[$ultimo] ?? $estados[''];
                         </li>
                     </ol>
                 </section>
-
+                <div class="law-wrapper">
+                    <section class="law" data-speed="0.9">
+                        <h2>Lei 14.300/2022</h2>
+                        <p>Essa lei estabelece o direito dos consumidores escolherem a fonte de energia que irão
+                            consumir, normalmente a energia consumida é de hidroelétricas que é uma fonte de energia não
+                            renovável e com custo elevado</p>
+                    </section>
+                </div>
                 <section class="do-your-login">
                     <h2>Faça seu cadastro</h2>
                     <ul class="formas-de-cadastro">
@@ -192,9 +195,9 @@ $current = $estados[$ultimo] ?? $estados[''];
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
-    <script src="./scripts/select-states.js?v=5"></script>
-    <script src="./scripts/handle-faq.js?v=5"></script>
-    <script src="./scripts/animations.js?v=5"></script>
+    <script src="./scripts/select-states.js?v=7"></script>
+    <script src="./scripts/handle-faq.js?v=7"></script>
+    <script src="./scripts/animations.js?v=7"></script>
 </body>
 
 </html>
