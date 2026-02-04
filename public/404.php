@@ -17,7 +17,13 @@ http_response_code(404);
             --font-main: "Krona One", sans-serif;
         }
 
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
         body {
+            margin: 20px;
             background-color: var(--color-1);
             font-family: Arial, Helvetica, sans-serif;
 
@@ -30,6 +36,7 @@ http_response_code(404);
         h1 {
             color: var(--color-2);
             font-size: 5em;
+            word-break: break-all;
         }
     </style>
     <title>Página não encontrada</title>
