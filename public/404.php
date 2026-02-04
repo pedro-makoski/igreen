@@ -16,6 +16,16 @@ http_response_code(404);
             --font-default: "Poppins", sans-serif;
             --font-main: "Krona One", sans-serif;
         }
+
+        body {
+            background-color: var(--color-1);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: var(--color-2);
+            font-size: 5em;
+        }
     </style>
     <title>Página não encontrada</title>
 </head>

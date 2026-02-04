@@ -1,6 +1,6 @@
 <?php
-require_once '_data.php';
-require_once '_model.php';
+require_once '../src/_data.php';
+require_once '../src/_model.php';
 
 $path = isset($_GET['state']) ? strtolower(trim($_GET['state'])) : '';
 $current = $estados[$path] ?? $estados[''];
