@@ -2,6 +2,9 @@
 require_once './src/_data.php';
 require_once './src/_model.php';
 
+$protocolo = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+$urlCompleta = $protocolo . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
 $path = isset($_GET['state']) ? strtolower(trim($_GET['state'])) : '';
 $current = $estados[$path] ?? $estados[''];
 ?>
@@ -15,6 +18,10 @@ $current = $estados[$path] ?? $estados[''];
     <link rel="stylesheet" href="./styles/vars.css?v=22">
     <link rel="stylesheet" href="./styles/styles.css?v=22">
     <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Site de informações gerais sobre a IGreen. Este é um site de afiliado.">
+    <meta name="keywords" content="igreen, energia limpa, lei 14.300/2022">
+    <meta name="author", content="Thiago Sangalli Domingos, Pedro Makoski">
+    <link rel="canonical" href="<?php  echo $urlCompleta ?>">
 </head>
 
 <body>
