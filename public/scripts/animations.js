@@ -24,20 +24,8 @@ function animate() {
   ScrollTrigger.config({
     autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize",
   });
-  scrollToFocusSmooth()
-}
+  
 
-function scrollToFocusSmooth() {
-  window.addEventListener(
-    "focusin",
-    (e) => {
-      const smoother = ScrollSmoother.get();
-      if (smoother) {
-        smoother.scrollTo(e.target, true, "center center");
-      }
-    },
-    { passive: false },
-  );
 }
 
 class Animations {
