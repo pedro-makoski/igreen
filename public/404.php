@@ -12,9 +12,6 @@ http_response_code(404);
             --color-2: #DAFFED;
             --color-3: #002626;
             --border-radius: 10px;
-
-            --font-default: "Poppins", sans-serif;
-            --font-main: "Krona One", sans-serif;
         }
 
         * {
@@ -37,6 +34,10 @@ http_response_code(404);
             color: var(--color-2);
             font-size: 5em;
             word-break: break-all;
+        }
+
+        p {
+            color: var(--color-2);
         }
     </style>
     <title>Página não encontrada</title>
