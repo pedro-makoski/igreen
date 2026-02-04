@@ -25,7 +25,6 @@ class FaqHandler {
 
     const question = item.querySelector(".question")
     question.addEventListener("click", openFn);
-    question.addEventListener("focus", openFn)
 }
 
   close(item) {

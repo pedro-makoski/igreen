@@ -15,8 +15,8 @@ $current = $estados[$path] ?? $estados[''];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Igreen - <?php echo $current->nome; ?></title>
-    <link rel="stylesheet" href="./styles/vars.css?v=22">
-    <link rel="stylesheet" href="./styles/styles.css?v=22">
+    <link rel="stylesheet" href="./styles/vars.css?v=25">
+    <link rel="stylesheet" href="./styles/styles.css?v=25">
     <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
     <meta name="description" content="Site de informações gerais sobre a IGreen. Este é um site de afiliado.">
     <meta name="keywords" content="igreen, energia limpa, lei 14.300/2022">
@@ -202,9 +202,9 @@ $current = $estados[$path] ?? $estados[''];
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
-    <script src="./scripts/select-states.js?v=22"></script>
-    <script src="./scripts/handle-faq.js?v=22"></script>
-    <script src="./scripts/animations.js?v=22"></script>
+    <script src="./scripts/select-states.js?v=25"></script>
+    <script src="./scripts/handle-faq.js?v=25"></script>
+    <script src="./scripts/animations.js?v=25"></script>
 </body>
 
 </html>
