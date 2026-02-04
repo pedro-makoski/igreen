@@ -20,6 +20,11 @@ http_response_code(404);
         body {
             background-color: var(--color-1);
             font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
