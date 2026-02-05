@@ -73,7 +73,7 @@ $current = $estados[$path] ?? $estados[''];
                 </div>
                 <div class="hero">
                     <h1>Economize na sua conta de luz</h1>
-                    <p>Invista numa conta de luz Igreen, sem burocracia, e economize em até <strong>8% até 100%</strong> todos os meses</p>
+                    <p>Invista numa conta de luz Igreen, sem burocracia, e economize em até <strong>8% até 15%</strong> todos os meses</p>
                     <div class="cadastrar-button hover-flecha-menu">
                         <a href="<?php echo $current->linkCadastro; ?>" rel="external" target="_blank">Cadastrar</a>
                     </div>
