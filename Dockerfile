@@ -1,7 +1,5 @@
-# Use a imagem oficial do PHP com Apache
 FROM php:8.4-apache
 
-# 1. Configurar PHP para Cloud Run (Opcache e limites)
 RUN docker-php-ext-install -j "$(nproc)" opcache
 RUN set -ex; \
   { \
@@ -18,10 +16,6 @@ RUN set -ex; \
     echo "opcache.memory_consumption = 32"; \
   } > "$PHP_INI_DIR/conf.d/cloud-run.ini"
 
-# 2. Configurar o DocumentRoot para /public e tratar erros/privacidade
-# - Muda a raiz do site para a pasta /public
-# - Bloqueia o acesso à pasta /src que está dentro de /public
-# - Configura o 404 personalizado
 RUN set -ex; \
     sed -ri -e 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/*.conf; \
     sed -ri -e 's!/var/www/html!/var/www/html/public!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf; \
@@ -33,11 +27,9 @@ RUN set -ex; \
         echo "</Directory>"; \
     } >> /etc/apache2/apache2.conf
 
-# 3. Copiar o código para o container
 WORKDIR /var/www/html
 COPY . ./
 
-# 4. Ajustar permissões e porta
 RUN chown -R www-data:www-data /var/www/html
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
 
